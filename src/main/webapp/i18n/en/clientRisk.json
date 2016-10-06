@@ -1,0 +1,24 @@
+{
+    "mosaicApp": {
+        "clientRisk" : {
+            "home": {
+                "title": "Client Risks",
+                "createLabel": "Create a new Client Risk",
+                "createOrEditLabel": "Create or edit a Client Risk",
+                "search": "Search for Client Risk"
+            },
+            "created": "A new Client Risk is created with identifier {{ param }}",
+            "updated": "A Client Risk is updated with identifier {{ param }}",
+            "deleted": "A Client Risk is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Client Risk {{ id }}?"
+            },
+            "detail": {
+                "title": "Client Risk"
+            },
+            "gfcId": "Gfc Id",
+            "listType": "List Type",
+            "temperature": "Temperature"
+        }
+    }
+}

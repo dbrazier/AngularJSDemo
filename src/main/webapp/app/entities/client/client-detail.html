@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span translate="mosaicApp.client.detail.title">Client</span> {{vm.client.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.client.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.client.gfcId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.gfcName">Gfc Name</span></dt>
+        <dd>
+            <span>{{vm.client.gfcName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.gfpId">Gfp Id</span></dt>
+        <dd>
+            <span>{{vm.client.gfpId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.contactName">Contact Name</span></dt>
+        <dd>
+            <span>{{vm.client.contactName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.contactNo">Contact No</span></dt>
+        <dd>
+            <span>{{vm.client.contactNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.contactEmail">Contact Email</span></dt>
+        <dd>
+            <span>{{vm.client.contactEmail}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.serviceModel">Service Model</span></dt>
+        <dd>
+            <span>{{vm.client.serviceModel}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.tier">Tier</span></dt>
+        <dd>
+            <span>{{vm.client.tier}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.clientSector">Client Sector</span></dt>
+        <dd>
+            <span>{{vm.client.clientSector}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.noAccounts">No Accounts</span></dt>
+        <dd>
+            <span>{{vm.client.noAccounts}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.lastInteraction">Last Interaction</span></dt>
+        <dd>
+            <span>{{vm.client.lastInteraction | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.client.inquiryVolume">Inquiry Volume</span></dt>
+        <dd>
+            <span>{{vm.client.inquiryVolume}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="client-detail.edit({id:vm.client.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

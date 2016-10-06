@@ -1,0 +1,97 @@
+entity Client {
+	gfcId Long,
+	gfcName String,
+    gfpId Long,
+    contactName String,
+    contactNo	String,
+    contactEmail String,
+    serviceModel String,
+    tier String,
+    clientSector String,
+    noAccounts Integer,
+    lastInteraction	ZonedDateTime,
+	inquiryVolume String
+}
+
+entity ClientParent {
+	gfpId Long,
+    gfpName String,
+	gfcId Long
+
+ }
+
+entity ClientAccount {
+	accountNo Long,	
+	gfcId Long,
+	branch Long,
+    accountName String,
+    currency String,
+    balance BigDecimal,
+    restriction String,
+	status String
+}
+
+entity Rate {
+	accountNo Long,	
+	rateDate ZonedDateTime,
+	dbIr Double,
+    crIr Double    
+}
+
+entity InquiryInfo {
+	caseId Long,
+    gfcId Long,
+	inquiryTypeId Integer,
+    caseOwner String,
+    status	String,
+    lastInteraction	ZonedDateTime,
+    sla Integer,
+    caseStartDate ZonedDateTime,
+    urgency String,
+    notes String
+}
+
+entity InquiryType {
+    inquiryType String
+}
+
+entity PaymentFile {
+	gfcId Long,
+    fileId Long,
+    profileId Long,    
+    fileName String,
+    fileStart String,
+    gksEnd String,
+    lastStep String,
+    txnId Long,
+    failed String,
+    fileStatus String,
+    fileProfile String,
+    sourceSystem String
+}
+
+entity PaymentTransaction {
+	gfcId Long,
+    fileId Long,
+    txnRefId Long,    
+    txnId Long,    
+    txnStatus String,
+    currency String,
+    amount BigDecimal,
+    debitAccNo Long,    
+    creditAccNo Long,
+    beneficiaryName String
+}
+
+
+
+
+service Client with serviceClass
+service ClientAccount with serviceClass
+service Rate with serviceClass
+service InquiryInfo with serviceClass
+service InquiryType with serviceClass
+service PaymentFile with serviceClass
+service PaymentTransaction with serviceClass
+service ClientParent with serviceClass
+

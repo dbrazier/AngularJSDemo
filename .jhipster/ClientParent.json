@@ -1,0 +1,25 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "gfpId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "gfpName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    }
+  ],
+  "changelogDate": "20160805144802",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "client_parent"
+}

@@ -1,0 +1,50 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "accountNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "branch",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "accountName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "balance",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "restriction",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "status",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144803",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "account"
+}

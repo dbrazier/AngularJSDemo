@@ -1,0 +1,32 @@
+{
+    "mosaicApp": {
+        "inquiryInfo" : {
+            "home": {
+                "title": "Inquiry Details",
+                "createLabel": "Create a new Inquiry Detail",
+                "createOrEditLabel": "Create or edit a Inquiry Detail",
+                "search": "Search for Inquiry Info"
+            },
+            "created": "A new Inquiry Detail is created with identifier {{ param }}",
+            "updated": "A Inquiry Detail is updated with identifier {{ param }}",
+            "deleted": "A Inquiry Detail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Inquiry Detail {{ id }}?"
+            },
+            "detail": {
+                "title": "Inquiry Detail"
+            },
+            "caseId": "Case Id",
+            "gfcId": "Gfc Id",
+            "inquiryTypeId": "Inquiry Type",
+            "caseOwner": "Case Owner",
+            "status": "Status",
+            "lastInteraction": "Last Interaction",
+            "sla": "Sla",
+            "caseStartDate": "Case Start Date",
+            "urgency": "Urgency",
+            "notes": "Notes",
+            "accountNo": "Account No"
+        }
+    }
+}

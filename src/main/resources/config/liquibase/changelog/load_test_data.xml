@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="00000000000008" author="db44417"  >
+        <comment>Loading test data</comment>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/client.csv"
+                  separator=";"
+                  tableName="client"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/client_account.csv"
+                  separator=";"
+                  tableName="client_account"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/client_parent.csv"
+                  separator=";"
+                  tableName="client_parent"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/inquiry_info.csv"
+                  separator=";"
+                  tableName="inquiry_info"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/inquiry_trail.csv"
+                  separator=";"
+                  tableName="inquiry_trail"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/payment_file.csv"
+                  separator=";"
+                  tableName="payment_file"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/payment_transaction.csv"
+                  separator=";"
+                  tableName="payment_transaction"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/rate.csv"
+                  separator=";"
+                  tableName="rate"/>
+
+    </changeSet>
+
+</databaseChangeLog>

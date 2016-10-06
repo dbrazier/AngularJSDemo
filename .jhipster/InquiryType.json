@@ -1,0 +1,15 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "inquiryType",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144806",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "inquiry_type"
+}

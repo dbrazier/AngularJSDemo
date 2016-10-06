@@ -1,0 +1,22 @@
+{
+    "mosaicApp": {
+        "inquiryType" : {
+            "home": {
+                "title": "Inquiry Types",
+                "createLabel": "Create a new Inquiry Type",
+                "createOrEditLabel": "Create or edit a Inquiry Type",
+                "search": "Search for Inquiry Type"
+            },
+            "created": "A new Inquiry Type is created with identifier {{ param }}",
+            "updated": "A Inquiry Type is updated with identifier {{ param }}",
+            "deleted": "A Inquiry Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Inquiry Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Inquiry Type"
+            },
+            "inquiryType": "Inquiry Type"
+        }
+    }
+}

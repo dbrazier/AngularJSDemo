@@ -1,0 +1,56 @@
+
+<div>
+    <h2><span translate="mosaicApp.clientAccount.detail.title">Client Account</span> {{vm.clientAccount.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.clientAccount.accountNo">Account No</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.accountNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.gfcId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.branch">Branch</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.branch}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.accountName">Account Name</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.accountName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.currency">Currency</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.currency}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.balance">Balance</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.balance}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.restriction">Restriction</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.restriction}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.status">Status</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.status}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientAccount.iban">IBAN</span></dt>
+        <dd>
+            <span>{{vm.clientAccount.iban}}</span>
+        </dd>
+
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="client-account-detail.edit({id:vm.clientAccount.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

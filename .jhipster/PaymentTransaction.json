@@ -1,0 +1,60 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "fileId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "txnRefId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "txnId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "txnStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "currency",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "debitAccNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "creditAccNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "beneficiaryName",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144808",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "payment_transaction"
+}

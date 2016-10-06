@@ -1,0 +1,11 @@
+case_id;cso_name;cso_email;cso_contact_type;client_name;client_email;client_contact_no;client_contact_type;inquiry_date;response_date;notes;attachment
+S-160613-004801;Joe Bloggs;so12312@bss.com;To;Shabnaz Mostofipour;punam.chandulal@cgi.com;+353 (0) 1 890 1234;Email;"2016-07-19 16:05:00.0";"2016-07-19 16:05:00.0";Blah;missAcc1.PNG
+S-160613-004801;Joe Bloggs;so12312@bss.com;From;Shabnaz Mostofipour;punam.chandulal@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-12 12:43:00.0";"2016-08-12 12:43:00.0";Blah;missAcc2.PNG
+S-160613-004801;Joe Bloggs;so12312@bss.com;To;Shabnaz Mostofipour;punam.chandulal@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-12 13:11:00.0";"2016-08-12 13:11:00.0";Blah;missAcc3.PNG
+S-160613-004801;Joe Bloggs;so12312@bss.com;From;Shabnaz Mostofipour;shabnaz.mostofipour@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-15 12:00:00.0";"2016-08-15 12:30:00.0";Blah;From.jpg
+S-160613-004801;Joe Bloggs;so12312@bss.com;Sent To;Shabnaz Mostofipour;shabnaz.mostofipour@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-16 15:00:00.0";"2016-08-16 16:20:00.0";Blah;SendTo.jpg
+S-160613-004801;Joe Bloggs;so12312@bss.com;From;Shabnaz Mostofipour;shabnaz.mostofipour@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-17 11:00:00.0";"2016-08-17 12:30:00.0";Blah;From.jpg
+S-160613-004801;Joe Bloggs;so12312@bss.com;Sent To;Shabnaz Mostofipour;shabnaz.mostofipour@cgi.com;+353 (0) 1 890 1234;Email;"2016-08-18 10:00:00.0";"2016-08-19 11:00:00.0";Blah;SendTo.jpg
+
+
+

@@ -1,0 +1,32 @@
+{
+    "mosaicApp": {
+        "paymentTransaction" : {
+            "home": {
+                "title": "Payment Transactions",
+                "createLabel": "Create a new Payment Transaction",
+                "createOrEditLabel": "Create or edit a Payment Transaction",
+                "search": "Search for Payment Transaction"
+            },
+            "created": "A new Payment Transaction is created with identifier {{ param }}",
+            "updated": "A Payment Transaction is updated with identifier {{ param }}",
+            "deleted": "A Payment Transaction is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Payment Transaction {{ id }}?"
+            },
+            "detail": {
+                "title": "Payment Transaction"
+            },
+            "gfcId": "Gfc Id",
+            "fileId": "File Id",
+            "txnRefId": "Txn Ref Id",
+            "txnId": "Txn Id",
+            "txnStatus": "Txn Status",
+            "currency": "Currency",
+            "amount": "Amount",
+            "debitAccNo": "Debit Acc No",
+            "creditAccNo": "Credit Acc No",
+            "beneficiaryName": "Beneficiary Name",
+            "statusDescription": "Status Description"
+        }
+    }
+}

@@ -1,0 +1,92 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPaymentTransactionLabel" translate="mosaicApp.paymentTransaction.home.createOrEditLabel">Create or edit a Payment Transaction</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.paymentTransaction.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.paymentTransaction.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.gfcId" for="field_gfcId">Gfc Id</label>
+            <input type="number" class="form-control" name="gfcId" id="field_gfcId"
+                    ng-model="vm.paymentTransaction.gfcId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.fileId" for="field_fileId">File Id</label>
+            <input type="number" class="form-control" name="fileId" id="field_fileId"
+                    ng-model="vm.paymentTransaction.fileId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.txnRefId" for="field_txnRefId">Txn Ref Id</label>
+            <input type="number" class="form-control" name="txnRefId" id="field_txnRefId"
+                    ng-model="vm.paymentTransaction.txnRefId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.txnId" for="field_txnId">Txn Id</label>
+            <input type="number" class="form-control" name="txnId" id="field_txnId"
+                    ng-model="vm.paymentTransaction.txnId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.txnStatus" for="field_txnStatus">Txn Status</label>
+            <input type="text" class="form-control" name="txnStatus" id="field_txnStatus"
+                    ng-model="vm.paymentTransaction.txnStatus"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.currency" for="field_currency">Currency</label>
+            <input type="text" class="form-control" name="currency" id="field_currency"
+                    ng-model="vm.paymentTransaction.currency"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="vm.paymentTransaction.amount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.debitAccNo" for="field_debitAccNo">Debit Acc No</label>
+            <input type="number" class="form-control" name="debitAccNo" id="field_debitAccNo"
+                    ng-model="vm.paymentTransaction.debitAccNo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.creditAccNo" for="field_creditAccNo">Credit Acc No</label>
+            <input type="number" class="form-control" name="creditAccNo" id="field_creditAccNo"
+                    ng-model="vm.paymentTransaction.creditAccNo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.beneficiaryName" for="field_beneficiaryName">Beneficiary Name</label>
+            <input type="text" class="form-control" name="beneficiaryName" id="field_beneficiaryName"
+                    ng-model="vm.paymentTransaction.beneficiaryName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.paymentTransaction.statusDescription" for="field_statusDescription">Status Description</label>
+            <input type="text" class="form-control" name="statusDescription" id="field_statusDescription"
+                    ng-model="vm.paymentTransaction.statusDescription"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,78 @@
+<div>
+    <h2 translate="mosaicApp.inquiryTrail.home.title">Inquiry Trails</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="inquiry-trail.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.inquiryTrail.home.createLabel">
+                        Create new Inquiry Trail
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.caseId">Case Id</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.csoName">Cso Name</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.csoEmail">Cso Email</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.clientName">Client Name</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.clientEmail">Client Email</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.clientContactNo">Client Contact No</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.clientContactType">Client Contact Type</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.inquiryDate">Inquiry Date</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.responseDate">Response Date</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.notes">Notes</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.csoContactType">Cso Contact Type</span></th>
+                    <th><span translate="mosaicApp.inquiryTrail.attachment">Attachment</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="inquiryTrail in vm.inquiryTrails track by inquiryTrail.id">
+                    <td><a ui-sref="inquiry-trail-detail({id:inquiryTrail.id})">{{inquiryTrail.id}}</a></td>
+                    <td>{{inquiryTrail.caseId}}</td>
+                    <td>{{inquiryTrail.csoName}}</td>
+                    <td>{{inquiryTrail.csoEmail}}</td>
+                    <td>{{inquiryTrail.clientName}}</td>
+                    <td>{{inquiryTrail.clientEmail}}</td>
+                    <td>{{inquiryTrail.clientContactNo}}</td>
+                    <td>{{inquiryTrail.clientContactType}}</td>
+                    <td>{{inquiryTrail.inquiryDate | date:'medium'}}</td>
+                    <td>{{inquiryTrail.responseDate | date:'medium'}}</td>
+                    <td>{{inquiryTrail.notes}}</td>
+                    <td>{{inquiryTrail.csoContactType}}</td>
+                    <td>{{inquiryTrail.attachment}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="inquiry-trail-detail({id:inquiryTrail.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inquiry-trail.edit({id:inquiryTrail.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inquiry-trail.delete({id:inquiryTrail.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

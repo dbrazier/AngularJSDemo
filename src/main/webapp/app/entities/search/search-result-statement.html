@@ -1,0 +1,111 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="text-primary">Statement Selector</h4>
+    </div>
+
+    <jhi-alert></jhi-alert>
+    <div class="modal-body">
+    <form>
+        <div class="well">
+            <div class="row">
+                <!-- Calendar -->
+                <div class="col-md-4">
+                    <div style="display:inline-block;">
+                        <div uib-datepicker ng-model="vm.dt" class="well-sm" ng-change="vm.setDate();" datepicker-options="vm.options"></div>
+                    </div>
+                </div>
+                <!-- Options -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="form-group">
+                            <label class="col-md-1" for="field_fromDate">From</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" name="fromDate" id="field_fromDate"
+                                       ng-model="vm.statement.fromDate"/>
+                            </div>
+                            <label class="col-md-1" for="field_toDate">To</label>
+                            <div class="col-md-3">
+                                <input type="text" class="form-control" name="toDate" id="field_toDate"
+                                       ng-model="vm.statement.toDate"/>
+                            </div>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label>Format</label>
+                        </div>
+                        <br/>
+                        <div class="col-md-5">
+                                <label class="checkbox-inline"><input type="checkbox" checked="checked">PDF</label>
+                                <label class="checkbox-inline"><input type="checkbox">CSV</label>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Statement Type</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1">
+                            <label></label>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked="checked">Cash Statement</label>
+                            </div>
+                            <div class="checkbox">
+                                <label><input type="checkbox" checked="checked">Interest Statement</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Range -->
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                    <span class="glyphicon"></span>&nbsp;<span>last 7 days</span>
+                                </button>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                    <span class="glyphicon"></span>&nbsp;<span>last 30 days</span>
+                                </button>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                    <span class="glyphicon"></span>&nbsp;<span>last month&nbsp;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    </div>
+
+    <br/>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.close">Close</span>
+        </button>
+
+        <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-arrow-down"></span>&nbsp;<span translate="entity.action.download">Download</span>
+        </button>
+    </div>
+</div>
+

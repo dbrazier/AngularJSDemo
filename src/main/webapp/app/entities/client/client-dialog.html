@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientLabel" translate="mosaicApp.client.home.createOrEditLabel">Create or edit a Client</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.client.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.client.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.gfcId" for="field_gfcId">Gfc Id</label>
+            <input type="number" class="form-control" name="gfcId" id="field_gfcId"
+                    ng-model="vm.client.gfcId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.gfcName" for="field_gfcName">Gfc Name</label>
+            <input type="text" class="form-control" name="gfcName" id="field_gfcName"
+                    ng-model="vm.client.gfcName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.gfpId" for="field_gfpId">Gfp Id</label>
+            <input type="number" class="form-control" name="gfpId" id="field_gfpId"
+                    ng-model="vm.client.gfpId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.contactName" for="field_contactName">Contact Name</label>
+            <input type="text" class="form-control" name="contactName" id="field_contactName"
+                    ng-model="vm.client.contactName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.contactNo" for="field_contactNo">Contact No</label>
+            <input type="text" class="form-control" name="contactNo" id="field_contactNo"
+                    ng-model="vm.client.contactNo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.contactEmail" for="field_contactEmail">Contact Email</label>
+            <input type="text" class="form-control" name="contactEmail" id="field_contactEmail"
+                    ng-model="vm.client.contactEmail"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.serviceModel" for="field_serviceModel">Service Model</label>
+            <input type="text" class="form-control" name="serviceModel" id="field_serviceModel"
+                    ng-model="vm.client.serviceModel"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.tier" for="field_tier">Tier</label>
+            <input type="text" class="form-control" name="tier" id="field_tier"
+                    ng-model="vm.client.tier"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.clientSector" for="field_clientSector">Client Sector</label>
+            <input type="text" class="form-control" name="clientSector" id="field_clientSector"
+                    ng-model="vm.client.clientSector"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.noAccounts" for="field_noAccounts">No Accounts</label>
+            <input type="number" class="form-control" name="noAccounts" id="field_noAccounts"
+                    ng-model="vm.client.noAccounts"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.lastInteraction" for="field_lastInteraction">Last Interaction</label>
+                <div class="input-group">
+                    <input id="field_lastInteraction" type="text" class="form-control" name="lastInteraction" datetime-picker="{{dateformat}}" ng-model="vm.client.lastInteraction" is-open="vm.datePickerOpenStatus.lastInteraction"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastInteraction')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.client.inquiryVolume" for="field_inquiryVolume">Inquiry Volume</label>
+            <input type="text" class="form-control" name="inquiryVolume" id="field_inquiryVolume"
+                    ng-model="vm.client.inquiryVolume"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

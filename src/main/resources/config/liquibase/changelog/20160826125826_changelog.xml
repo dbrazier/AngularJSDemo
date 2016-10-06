@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="db44417 (generated)" id="1472216322281-1">
+        <dropDefaultValue columnDataType="timestamp" columnName="case_start_date" tableName="inquiry_info"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-2">
+        <dropDefaultValue columnDataType="timestamp" columnName="created_date" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-3">
+        <dropDefaultValue columnDataType="timestamp" columnName="inquiry_date" tableName="inquiry_trail"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-4">
+        <dropDefaultValue columnDataType="timestamp" columnName="last_interaction" tableName="client"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-5">
+        <dropDefaultValue columnDataType="timestamp" columnName="last_interaction" tableName="inquiry_info"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-6">
+        <dropDefaultValue columnDataType="timestamp" columnName="last_modified_date" tableName="jhi_user"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-7">
+        <dropDefaultValue columnDataType="timestamp" columnName="rate_date" tableName="rate"/>
+    </changeSet>
+    <changeSet author="db44417 (generated)" id="1472216322281-8">
+        <dropDefaultValue columnDataType="timestamp" columnName="response_date" tableName="inquiry_trail"/>
+    </changeSet>
+</databaseChangeLog>

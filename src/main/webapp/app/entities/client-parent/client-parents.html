@@ -1,0 +1,60 @@
+<div>
+    <h2 translate="mosaicApp.clientParent.home.title">Client Parents</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="client-parent.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.clientParent.home.createLabel">
+                        Create new Client Parent
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.clientParent.gfpId">Gfp Id</span></th>
+                    <th><span translate="mosaicApp.clientParent.gfpName">Gfp Name</span></th>
+                    <th><span translate="mosaicApp.clientParent.gfcId">Gfc Id</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="clientParent in vm.clientParents track by clientParent.id">
+                    <td><a ui-sref="client-parent-detail({id:clientParent.id})">{{clientParent.id}}</a></td>
+                    <td>{{clientParent.gfpId}}</td>
+                    <td>{{clientParent.gfpName}}</td>
+                    <td>{{clientParent.gfcId}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="client-parent-detail({id:clientParent.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="client-parent.edit({id:clientParent.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="client-parent.delete({id:clientParent.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

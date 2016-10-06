@@ -1,0 +1,18 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "accountNo",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "caseId",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20160811114204",
+    "dto": "no",
+    "service": "serviceClass",
+    "entityTableName": "search",
+    "pagination": "no"
+}

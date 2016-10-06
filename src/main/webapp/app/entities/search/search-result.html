@@ -1,0 +1,369 @@
+<div class="container-fluid">
+    <jhi-alert-error></jhi-alert-error>
+    <div class="row">
+        <div class="col-md-8">
+            <!---------------------->
+            <!-- Account / Owner -->
+            <!---------------------->
+            <div class="border-outset">
+                <div class="row border-between">
+                    <div class="col-md-6">
+                        <h4>
+                            {{vm.result.caseInfo.accountName}}
+                        </h4>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>
+                            <!--{{vm.result.caseInfo.caseOwnerName}}-->
+                            Molly Bloom
+                        </h4>
+                    </div>
+                </div>
+                <div class="row border-between">
+                    <div class="col-md-6">
+                        <span class="text-muted">{{vm.result.caseInfo.gfcParentName}}</span>
+                        <span ng-if="!!vm.result.clientRisk" class="fa fa-exclamation-triangle"  ng-class="vm.result.clientRisk.temperature"
+                           data-toggle="tooltip" title="{{vm.result.clientRisk.listType}}" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-md-6">
+                        <!--<span class="text-muted">{{vm.result.caseInfo.caseOwner}}@bss.com</span>-->
+                        <span class="text-muted">m.bloom@xyzcorp.com</span>
+                    </div>
+                </div>
+                <div class="row border-between">
+                    <div class="col-md-6">
+                        <div class="row" style="padding-top: 5px;">
+                            <div class="col-md-6">
+                                <span class="text-muted">{{vm.result.caseInfo.tier}}</span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="text-muted">{{vm.result.caseInfo.serviceModel}}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <!--<span class="text-muted">{{vm.result.client.contactNo}}</span>-->
+                        <span class="text-muted">+353 1 890 1234</span>
+                    </div>
+                </div>
+                <div class="row border-between">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-6">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-6">
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="" class="fa fa-users" data-toggle="tooltip" title="Internal Contacts" ng-click="vm.openInNewWindow('content/images/internalcontacts.png')"></a>
+                                    <a href="" class="fa fa-sitemap" data-toggle="tooltip" title="Client Structure" ng-click="vm.openInNewWindow('content/images/clientstructure.png')"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <!---------------------->
+            <!-- Last 5 Inquiries -->
+            <!---------------------->
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-11">
+                        <h4 class="text-primary">Last 5 Inquiries ({{vm.result.caseInfo.gfcId}})</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <a ui-sref="">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr ng-repeat="caseInfoItem in vm.result.caseInfoList">
+                                <!--<td ng-class="{colred: caseInfoItem.slaExpired, colgreen: !caseInfoItem.slaExpired}"></td>-->
+                                <td sla-expired></td>
+                                <sla-expired1 caseInfoItem="{{caseInfoItem}}"/>
+                                <td><span class="small">{{caseInfoItem.caseId}}</span></td>
+                                <td><span class="small">{{caseInfoItem.accountName}}</span></td>
+                                <td><span class="small">{{caseInfoItem.inquiryType}}</span></td>
+                                <td><span class="small">{{caseInfoItem.caseOwner}}</span></td>
+                                <td><span class="small">{{caseInfoItem.slaName}}</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <!------------------>
+            <!-- Account Info -->
+            <!------------------>
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4 class="text-primary">Account Details</h4>
+                    </div>
+                    <div class="col-md-3">
+                        <h5 class="text-primary">{{vm.today | date:'yyyy-MM-dd'}}</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <!--ui-sref="rate.history({id:vm.result.clientAccount.accountNo}}"-->
+                        <button type="button"
+                                ui-sref="rate-history"
+                                class="btn btn-info btn-sm">
+                            <span class="hidden-xs hidden-sm" translate="entity.action.interestRate"></span>
+                        </button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button"
+                                ui-sref="statement-select"
+                                class="btn btn-info btn-sm">
+                            <span class="hidden-xs hidden-sm" translate="entity.action.statement"></span>
+                        </button>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="small text-primary">Account Number</span><br/>
+                        <span id="accountNo" class="small">{{vm.result.caseInfo.accountNo}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="small text-primary">Account Name</span><br/>
+                        <span class="small">{{vm.result.caseInfo.accountName}}</span>
+                    </div>
+                    <div class="col-md-1">
+                        <span class="small text-primary">Branch</span><br/>
+                        <span class="small">{{vm.result.caseInfo.branch}}</span>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="small text-primary">CUR</span><br/>
+                                <span class="small">{{vm.result.caseInfo.currency}}</span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="small text-primary">Balance</span><br/>
+                                <span class="small">{{vm.result.clientAccount.balance | currency:"€"}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <span class="small text-primary">IBAN</span><br/>
+                        <span class="small">{{vm.result.clientAccount.iban}}</span>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="small text-primary">Posting Restrictions</span><br/>
+                        <span class="small">{{vm.result.clientAccount.restriction}}</span>
+                    </div>
+                    <div class="col-md-1">
+                        <span class="small text-primary">Status</span><br/>
+                        <span class="small">{{vm.result.clientAccount.status}}</span>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span class="small text-primary">DR Interest</span><br/>
+                                <span class="small">{{vm.result.rateList[0].dbIr}} <img height="15" width="15" src="content/images/lessEq.png"/> 1,000,000</span><br/>
+                                <span class="small">{{vm.result.rateList[1].dbIr}} <img height="15" width="15" src="content/images/grEq.png"/> 1,000,000</span>
+                            </div>
+                            <div class="col-md-6">
+                                <span class="small text-primary">CR Interest</span><br/>
+                                <span class="small">{{vm.result.rateList[0].crIr}} <img height="15" width="15" src="content/images/lessEq.png"/> 1,000,000</span><br/>
+                                <span class="small">{{vm.result.rateList[1].crIr}} <img height="15" width="15" src="content/images/grEq.png"/> 1,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+            <!------------------>
+            <!-- Payment Info -->
+            <!------------------>
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h4 class="text-primary">Last 5 Failed Files</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <a ui-sref="payment-search">
+                            <span class="glyphicon glyphicon-search" data-toggle="tooltip" title="Search for Payment" ></span>
+                        </a>
+                    </div>
+                    <div class="col-md-1">
+                        <a ui-sref="">
+                            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                        </a>
+                    </div>
+                </div>
+                <hr/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>File/Batch ID</th>
+                                <th>Client Name</th>
+                                <th>Client File Name</th>
+                                <th>File Start</th>
+                                <th>Last Known Step</th>
+                                <th>Failed TXNS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat-start="paymentFile in vm.result.paymentFileList track by paymentFile.id">
+                                    <td><a ui-sref="payment-file-detail({id:paymentFile.id})">{{paymentFile.fileId}}</a></td>
+                                    <td>{{vm.result.clientAccount.accountName}}</td>
+                                    <td>{{paymentFile.fileName}}</td>
+                                    <td>{{paymentFile.fileStart | date:'yyyy-MM-dd hh:mm'}}</td>
+                                    <td>{{paymentFile.lastStep}}</td>
+                                    <td>{{paymentFile.failedTxns}}</td>
+                                    <td>
+                                        <button class="glyphicon glyphicon-arrow-up" ng-if="paymentFile.expanded" ng-click="paymentFile.expanded = false"></button>
+                                        <button class="glyphicon glyphicon-arrow-down" ng-if="!paymentFile.expanded" ng-click="paymentFile.expanded = true"></button>
+                                    </td>
+                                </tr>
+                                <div class="col-md-12">
+                                    <!-- paymentTransactions -->
+                                    <tr ng-if="paymentFile.expanded" ng-repeat-end="">
+                                        <td colspan="6">
+                                            <table class="table table-hover">
+                                                <thead class="embededTableHead">
+                                                <tr>
+                                                    <th>Txn ID</th>
+                                                    <th>Debit Acc</th>
+                                                    <th>Status</th>
+                                                    <th>Bene Name</th>
+                                                    <th>CUR</th>
+                                                    <th>Amount</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr ng-repeat="paymentTran in vm.result.paymentTransactionList track by paymentTran.id">
+                                                    <!--<td><a ui-sref="payment-transaction-detail({id:paymentTran.id})">{{paymentTran.txnId}}</a></td>-->
+                                                    <td>{{paymentTran.txnId}}</td>
+                                                    <td>{{paymentTran.debitAccNo}}</td>
+                                                    <td>
+                                                        <span uib-popover="{{paymentTran.statusDescription}}" popover-is-open="popoverIsOpen" ng-click="popoverIsOpen = !popoverIsOpen" class="popover-link" type="button">{{paymentTran.txnStatus}}</span>
+                                                    </td>
+                                                    <td>{{paymentTran.beneficiaryName}}</td>
+                                                    <td>{{paymentTran.currency}}</td>
+                                                    <td>{{paymentTran.amount}}</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </div>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------->
+        <!-- Right Panel -->
+        <!----------------->
+        <div class="col-md-4">
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="text-muted">Last Interaction with client</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="text-danger">{{vm.result.caseInfo.updateDate | moment: 'fromNow'}}</h3>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <!-- Case Info -->
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-primary">Case Details</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span id="caseId"><strong>{{vm.result.caseInfo.caseId}}</strong></span>
+                        <br/>
+                        <span class="text-muted">{{vm.result.caseInfo.inquiryType}}</span>
+                        <br/>
+                        <span class="text-muted">{{vm.result.caseInfo.status}}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="text-muted">SLA Expiry Date:</span> <strong>{{vm.result.caseInfo.slaDeadline | date:'yyyy-MM-dd'}}</strong>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="text-primary">CSO Notes</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--<span class="text-muted">{{vm.result.inquiryInfo.notes}}</span>-->
+                        <span class="text-muted">{{vm.result.caseNote.noteText}}</span>
+                    </div>
+                </div>
+            </div>
+            <br/>
+
+            <!-- Interaction History -->
+            <div class="border-outset">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5 class="text-primary">Interaction History</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-hover">
+                            <tbody>
+                                <tr ng-repeat="inquiryTrail in vm.result.inquiryTrailList">
+                                    <td class="glyphicon glyphicon-circle-arrow-down"></td>
+                                    <td><a ui-sref="inquiry-trail-detail({id:inquiryTrail.id})">
+                                            <span class="text-muted">{{inquiryTrail.responseDate | date:'yyyy-MM-dd hh:mm'}}</span><br/>
+                                        </a>
+                                        <span class="text-info">{{inquiryTrail.csoContactType}}: {{inquiryTrail.clientEmail}}</span><br/>
+                                        <span class="text-muted">Contact method: {{inquiryTrail.clientContactType}}</span>
+                                        <a href="" class="fa fa-paperclip" ng-click="vm.openInNewWindow('content/images/'+inquiryTrail.attachment)"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <br/>
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+</div>
+
+

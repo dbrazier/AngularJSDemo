@@ -1,0 +1,15 @@
+{
+    "mosaicApp": {
+        "search-case" : {
+            "home": {
+                "title": "Search",
+                "search": "Search by Account No or Case Id"
+            },
+            "detail": {
+                "title": "Search"
+            },
+            "accountNo": "Account No",
+            "caseId": "Case Id"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="mosaicApp.rate.detail.title">Rate</span> {{vm.rate.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.rate.accountNo">Account No</span></dt>
+        <dd>
+            <span>{{vm.rate.accountNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.rate.rateDate">Rate Date</span></dt>
+        <dd>
+            <span>{{vm.rate.rateDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.rate.dbIr">Db Ir</span></dt>
+        <dd>
+            <span>{{vm.rate.dbIr}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.rate.dbAmount">Db Amount</span></dt>
+        <dd>
+            <span>{{vm.rate.dbAmount}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.rate.crIr">Cr Ir</span></dt>
+        <dd>
+            <span>{{vm.rate.crIr}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.rate.crAmount">Cr Amount</span></dt>
+        <dd>
+            <span>{{vm.rate.crAmount}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="rate-detail.edit({id:vm.rate.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

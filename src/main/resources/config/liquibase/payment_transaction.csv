@@ -1,0 +1,3 @@
+gfc_id;file_id;txn_ref_id;txn_id;txn_status;amount;currency;debit_acc_no;credit_acc_no;beneficiary_name;status_description
+1;92308825;null;923088250000001;Level 2 Reject;448.76;EUR;354620001;null;ACME CORP;The Beneficiary Bank Routing code is incorrectly formatted.
+1;92308825;null;923088250000002;Failed;9456.34;EUR;354620001;null;ABC LTD;Checksum Error.

@@ -1,0 +1,94 @@
+<div>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 translate="mosaicApp.search.rate.title" class="text-primary">Historical Interest Rate</h4>
+    </div>
+
+    <jhi-alert></jhi-alert>
+    <div class="modal-body">
+        <div class="well">
+            <div class="row border-between">
+                <!-- Calendar -->
+                <div class="col-md-6">
+                    <div style="display:inline-block;">
+                        <div uib-datepicker ng-model="vm.dt" class="well-sm" ng-change="vm.setDate();" datepicker-options="vm.options"></div>
+                    </div>
+                </div>
+                <!-- Rates -->
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <span class="small text-muted">Account Number</span><br/>
+                                {{vm.result.clientAccount.accountNo}}
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <span class="small text-muted">Balance</span><br/>
+                                {{vm.rateBalance | currency:"€"}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <br/>
+                            <p class="text-center text-primary"><strong>{{vm.dt | date:mediumDate}}</strong></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p class="text-center">
+                                <span class="small text-info"><u>{{vm.yesterday | date:'MMM dd'}}</u></span><br/>
+                                <span class="text-muted">{{vm.result.rateList[vm.rateIndex+1].dbIr}}%</span><br/>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <span class="small text-muted">DR Interest</span><br/>
+                                <span class="highlightLarge text-primary">{{vm.result.rateList[vm.rateIndex].dbIr}}%</span><br/>
+                                <span class="small text-muted">Amount: </span>
+                                {{vm.result.rateList[vm.rateIndex].dbAmount}}
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-center" ng-show="vm.rateIndex > 0">
+                                <span class="small text-info"><u>{{vm.tomorrow | date:'MMM dd'}}</u></span><br/>
+                                <span class="text-muted">{{vm.result.rateList[vm.rateIndex-1].dbIr}}%</span><br/>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p class="text-center">
+                                <span class="text-muted">{{vm.result.rateList[vm.rateIndex+1].crIr}}%</span><br/>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-center">
+                                <span class="small text-muted">CR Interest</span><br/>
+                                <span class="highlightLarge text-primary">{{vm.result.rateList[vm.rateIndex].crIr}}%</span><br/>
+                                <span class="small text-muted">Amount: </span>
+                                {{vm.result.rateList[vm.rateIndex].crAmount}}
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            <p class="text-center" ng-show="vm.rateIndex > 0">
+                                <span class="text-muted">{{vm.result.rateList[vm.rateIndex-1].crIr}}%</span><br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.close">Close</span>
+        </button>
+    </div>
+</div>
+

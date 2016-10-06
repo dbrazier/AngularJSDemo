@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+
+    <changeSet id="00000000000009" author="db44417"  >
+        <comment>Loading test data</comment>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/client_risk.csv"
+                  separator=";"
+                  tableName="client_risk"/>
+
+    </changeSet>
+
+</databaseChangeLog>

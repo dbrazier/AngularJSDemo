@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span translate="mosaicApp.clientParent.detail.title">Client Parent</span> {{vm.clientParent.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.clientParent.gfpId">Gfp Id</span></dt>
+        <dd>
+            <span>{{vm.clientParent.gfpId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientParent.gfpName">Gfp Name</span></dt>
+        <dd>
+            <span>{{vm.clientParent.gfpName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.clientParent.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.clientParent.gfcId}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="client-parent-detail.edit({id:vm.clientParent.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

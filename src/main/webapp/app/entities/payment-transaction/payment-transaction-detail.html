@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="mosaicApp.paymentTransaction.detail.title">Payment Transaction</span> {{vm.paymentTransaction.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.paymentTransaction.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.gfcId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.fileId">File Id</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.fileId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.txnRefId">Txn Ref Id</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.txnRefId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.txnId">Txn Id</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.txnId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.txnStatus">Txn Status</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.txnStatus}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.currency">Currency</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.currency}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.amount">Amount</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.amount}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.debitAccNo">Debit Acc No</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.debitAccNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.creditAccNo">Credit Acc No</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.creditAccNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.beneficiaryName">Beneficiary Name</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.beneficiaryName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentTransaction.statusDescription">Status Description</span></dt>
+        <dd>
+            <span>{{vm.paymentTransaction.statusDescription}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="payment-transaction-detail.edit({id:vm.paymentTransaction.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

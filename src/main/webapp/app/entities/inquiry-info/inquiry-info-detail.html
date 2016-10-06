@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span translate="mosaicApp.inquiryInfo.detail.title">Inquiry Info</span> {{vm.inquiryInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.inquiryInfo.caseId">Case Id</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.caseId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.gfcId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.inquiryTypeId">Inquiry Type Id</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.inquiryTypeId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.caseOwner">Case Owner</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.caseOwner}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.status">Status</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.status}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.lastInteraction">Last Interaction</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.lastInteraction | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.sla">Sla</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.sla}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.caseStartDate">Case Start Date</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.caseStartDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.urgency">Urgency</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.urgency}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.notes">Notes</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.notes}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryInfo.accountNo">Account No</span></dt>
+        <dd>
+            <span>{{vm.inquiryInfo.accountNo}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <!--<button type="button" ui-sref="inquiry-info-detail.edit({id:vm.inquiryInfo.id})" class="btn btn-primary">-->
+        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+        <!--<span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>-->
+    <!--</button>-->
+</div>

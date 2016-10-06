@@ -1,0 +1,9 @@
+{
+    "home": {
+        "title": "Welcome",
+        "subtitle": "An operational single shared view of clients for frontline staff to enable quicker time to resolution",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        }
+    }
+}

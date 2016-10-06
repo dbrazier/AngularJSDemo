@@ -1,0 +1,30 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "accountNo",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "rateDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "dbIr",
+      "fieldType": "Double"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "crIr",
+      "fieldType": "Double"
+    }
+  ],
+  "changelogDate": "20160805144804",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "rate"
+}

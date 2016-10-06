@@ -1,0 +1,33 @@
+{
+    "mosaicApp": {
+        "inquiryTrail" : {
+            "home": {
+                "title": "Inquiry Trails",
+                "createLabel": "Create a new Inquiry Trail",
+                "createOrEditLabel": "Create or edit a Inquiry Trail",
+                "search": "Search for Inquiry Trail"
+            },
+            "created": "A new Inquiry Trail is created with identifier {{ param }}",
+            "updated": "A Inquiry Trail is updated with identifier {{ param }}",
+            "deleted": "A Inquiry Trail is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Inquiry Trail {{ id }}?"
+            },
+            "detail": {
+                "title": "Interaction History"
+            },
+            "caseId": "Case Id",
+            "csoName": "Cso Name",
+            "csoEmail": "Cso Email",
+            "clientName": "Client Name",
+            "clientEmail": "Client Email",
+            "clientContactNo": "Client Contact No",
+            "clientContactType": "Client Contact Type",
+            "inquiryDate": "Inquiry Date",
+            "responseDate": "Response Date",
+            "notes": "Notes",
+            "csoContactType": "Cso Contact Type",
+            "attachment": "Attachment"
+        }
+    }
+}

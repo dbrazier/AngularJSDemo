@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientAccountLabel" translate="mosaicApp.clientAccount.home.createOrEditLabel">Create or edit a Client Account</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.clientAccount.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.clientAccount.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.accountNo" for="field_accountNo">Account No</label>
+            <input type="number" class="form-control" name="accountNo" id="field_accountNo"
+                    ng-model="vm.clientAccount.accountNo"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.gfcId" for="field_gfcId">Gfc Id</label>
+            <input type="number" class="form-control" name="gfcId" id="field_gfcId"
+                    ng-model="vm.clientAccount.gfcId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.branch" for="field_branch">Branch</label>
+            <input type="number" class="form-control" name="branch" id="field_branch"
+                    ng-model="vm.clientAccount.branch"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.accountName" for="field_accountName">Account Name</label>
+            <input type="text" class="form-control" name="accountName" id="field_accountName"
+                    ng-model="vm.clientAccount.accountName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.currency" for="field_currency">Currency</label>
+            <input type="text" class="form-control" name="currency" id="field_currency"
+                    ng-model="vm.clientAccount.currency"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.balance" for="field_balance">Balance</label>
+            <input type="number" class="form-control" name="balance" id="field_balance"
+                    ng-model="vm.clientAccount.balance"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.restriction" for="field_restriction">Restriction</label>
+            <input type="text" class="form-control" name="restriction" id="field_restriction"
+                    ng-model="vm.clientAccount.restriction"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.status" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.clientAccount.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.clientAccount.iban" for="field_status">IBAN</label>
+            <input type="text" class="form-control" name="status" id="field_iban"
+                   ng-model="vm.clientAccount.iban"
+            />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

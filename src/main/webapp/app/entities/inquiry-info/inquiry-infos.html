@@ -1,0 +1,76 @@
+<div>
+    <h2 translate="mosaicApp.inquiryInfo.home.title">Inquiry Infos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="inquiry-info.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.inquiryInfo.home.createLabel">
+                        Create new Inquiry Info
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.caseId">Case Id</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.gfcId">Gfc Id</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.inquiryTypeId">Inquiry Type Id</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.caseOwner">Case Owner</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.status">Status</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.lastInteraction">Last Interaction</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.sla">Sla</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.caseStartDate">Case Start Date</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.urgency">Urgency</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.notes">Notes</span></th>
+                    <th><span translate="mosaicApp.inquiryInfo.accountNo">Account No</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="inquiryInfo in vm.inquiryInfos track by inquiryInfo.id">
+                    <td><a ui-sref="inquiry-info-detail({id:inquiryInfo.id})">{{inquiryInfo.id}}</a></td>
+                    <td>{{inquiryInfo.caseId}}</td>
+                    <td>{{inquiryInfo.gfcId}}</td>
+                    <td>{{inquiryInfo.inquiryTypeId}}</td>
+                    <td>{{inquiryInfo.caseOwner}}</td>
+                    <td>{{inquiryInfo.status}}</td>
+                    <td>{{inquiryInfo.lastInteraction | date:'medium'}}</td>
+                    <td>{{inquiryInfo.sla}}</td>
+                    <td>{{inquiryInfo.caseStartDate | date:'medium'}}</td>
+                    <td>{{inquiryInfo.urgency}}</td>
+                    <td>{{inquiryInfo.notes}}</td>
+                    <td>{{inquiryInfo.accountNo}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="inquiry-info-detail({id:inquiryInfo.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inquiry-info.edit({id:inquiryInfo.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="inquiry-info.delete({id:inquiryInfo.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

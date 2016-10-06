@@ -1,0 +1,72 @@
+<div>
+    <h2 translate="mosaicApp.clientAccount.home.title">Client Accounts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="client-account.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.clientAccount.home.createLabel">
+                        Create new Client Account
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.clientAccount.accountNo">Account No</span></th>
+                    <th><span translate="mosaicApp.clientAccount.gfcId">Gfc Id</span></th>
+                    <th><span translate="mosaicApp.clientAccount.branch">Branch</span></th>
+                    <th><span translate="mosaicApp.clientAccount.accountName">Account Name</span></th>
+                    <th><span translate="mosaicApp.clientAccount.currency">Currency</span></th>
+                    <th><span translate="mosaicApp.clientAccount.balance">Balance</span></th>
+                    <th><span translate="mosaicApp.clientAccount.restriction">Restriction</span></th>
+                    <th><span translate="mosaicApp.clientAccount.status">Status</span></th>
+                    <th><span translate="mosaicApp.clientAccount.iban">IBAN</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="clientAccount in vm.clientAccounts track by clientAccount.id">
+                    <td><a ui-sref="client-account-detail({id:clientAccount.id})">{{clientAccount.id}}</a></td>
+                    <td>{{clientAccount.accountNo}}</td>
+                    <td>{{clientAccount.gfcId}}</td>
+                    <td>{{clientAccount.branch}}</td>
+                    <td>{{clientAccount.accountName}}</td>
+                    <td>{{clientAccount.currency}}</td>
+                    <td>{{clientAccount.balance}}</td>
+                    <td>{{clientAccount.restriction}}</td>
+                    <td>{{clientAccount.status}}</td>
+                    <td>{{clientAccount.iban}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="client-account-detail({id:clientAccount.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="client-account.edit({id:clientAccount.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="client-account.delete({id:clientAccount.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span translate="mosaicApp.inquiryTrail.detail.title">Interaction History</span> {{vm.inquiryTrail.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.inquiryTrail.caseId">Case Id</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.caseId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.csoName">Cso Name</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.csoName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.csoEmail">Cso Email</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.csoEmail}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.clientName">Client Name</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.clientName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.clientEmail">Client Email</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.clientEmail}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.clientContactNo">Client Contact No</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.clientContactNo}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.clientContactType">Client Contact Type</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.clientContactType}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.inquiryDate">Inquiry Date</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.inquiryDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.responseDate">Response Date</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.responseDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.notes">Notes</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.notes}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.csoContactType">Cso Contact Type</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.csoContactType}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.inquiryTrail.attachment">Attachment</span></dt>
+        <dd>
+            <span>{{vm.inquiryTrail.attachment}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <!--<button type="button" ui-sref="inquiry-trail-detail.edit({id:vm.inquiryTrail.id})" class="btn btn-primary">-->
+        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+        <!--<span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>-->
+    <!--</button>-->
+</div>

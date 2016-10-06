@@ -1,0 +1,70 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "fileId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "profileId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "fileName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "fileStart",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "gksEnd",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "lastStep",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "txnId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "failed",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "fileStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "fileProfile",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "sourceSystem",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144807",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "payment_file"
+}

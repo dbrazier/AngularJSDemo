@@ -1,0 +1,70 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "gfcName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "gfpId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "contactNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "contactEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "serviceModel",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "tier",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "clientSector",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "noAccounts",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "lastInteraction",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 12,
+      "fieldName": "inquiryVolume",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144801",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "client"
+}

@@ -1,0 +1,78 @@
+<div>
+    <h2 translate="mosaicApp.paymentFile.home.title">Payment Files</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="payment-file.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.paymentFile.home.createLabel">
+                        Create new Payment File
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.paymentFile.gfcId">Gfc Id</span></th>
+                    <th><span translate="mosaicApp.paymentFile.fileId">File Id</span></th>
+                    <th><span translate="mosaicApp.paymentFile.profileId">Profile Id</span></th>
+                    <th><span translate="mosaicApp.paymentFile.fileName">File Name</span></th>
+                    <th><span translate="mosaicApp.paymentFile.fileStart">File Start</span></th>
+                    <th><span translate="mosaicApp.paymentFile.gksEnd">Gks End</span></th>
+                    <th><span translate="mosaicApp.paymentFile.lastStep">Last Step</span></th>
+                    <th><span translate="mosaicApp.paymentFile.noTxns">No Txns</span></th>
+                    <th><span translate="mosaicApp.paymentFile.failedTxns">Failed Txns</span></th>
+                    <th><span translate="mosaicApp.paymentFile.fileStatus">File Status</span></th>
+                    <th><span translate="mosaicApp.paymentFile.fileProfile">File Profile</span></th>
+                    <th><span translate="mosaicApp.paymentFile.sourceSystem">Source System</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="paymentFile in vm.paymentFiles track by paymentFile.id">
+                    <td><a ui-sref="payment-file-detail({id:paymentFile.id})">{{paymentFile.id}}</a></td>
+                    <td>{{paymentFile.gfcId}}</td>
+                    <td>{{paymentFile.fileId}}</td>
+                    <td>{{paymentFile.profileId}}</td>
+                    <td>{{paymentFile.fileName}}</td>
+                    <td>{{paymentFile.fileStart | date:'medium'}}</td>
+                    <td>{{paymentFile.gksEnd}}</td>
+                    <td>{{paymentFile.lastStep}}</td>
+                    <td>{{paymentFile.noTxns}}</td>
+                    <td>{{paymentFile.failedTxns}}</td>
+                    <td>{{paymentFile.fileStatus}}</td>
+                    <td>{{paymentFile.fileProfile}}</td>
+                    <td>{{paymentFile.sourceSystem}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="payment-file-detail({id:paymentFile.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="payment-file.edit({id:paymentFile.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="payment-file.delete({id:paymentFile.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

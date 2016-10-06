@@ -1,0 +1,100 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInquiryInfoLabel" translate="mosaicApp.inquiryInfo.home.createOrEditLabel">Create or edit a Inquiry Info</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.inquiryInfo.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.inquiryInfo.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.caseId" for="field_caseId">Case Id</label>
+            <input type="text" class="form-control" name="caseId" id="field_caseId"
+                    ng-model="vm.inquiryInfo.caseId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.gfcId" for="field_gfcId">Gfc Id</label>
+            <input type="number" class="form-control" name="gfcId" id="field_gfcId"
+                    ng-model="vm.inquiryInfo.gfcId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.inquiryTypeId" for="field_inquiryTypeId">Inquiry Type Id</label>
+            <input type="text" class="form-control" name="inquiryTypeId" id="field_inquiryTypeId"
+                    ng-model="vm.inquiryInfo.inquiryTypeId"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.caseOwner" for="field_caseOwner">Case Owner</label>
+            <input type="text" class="form-control" name="caseOwner" id="field_caseOwner"
+                    ng-model="vm.inquiryInfo.caseOwner"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.status" for="field_status">Status</label>
+            <input type="text" class="form-control" name="status" id="field_status"
+                    ng-model="vm.inquiryInfo.status"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.lastInteraction" for="field_lastInteraction">Last Interaction</label>
+                <div class="input-group">
+                    <input id="field_lastInteraction" type="text" class="form-control" name="lastInteraction" datetime-picker="{{dateformat}}" ng-model="vm.inquiryInfo.lastInteraction" is-open="vm.datePickerOpenStatus.lastInteraction"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastInteraction')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.sla" for="field_sla">Sla</label>
+            <input type="number" class="form-control" name="sla" id="field_sla"
+                    ng-model="vm.inquiryInfo.sla"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.caseStartDate" for="field_caseStartDate">Case Start Date</label>
+                <div class="input-group">
+                    <input id="field_caseStartDate" type="text" class="form-control" name="caseStartDate" datetime-picker="{{dateformat}}" ng-model="vm.inquiryInfo.caseStartDate" is-open="vm.datePickerOpenStatus.caseStartDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('caseStartDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.urgency" for="field_urgency">Urgency</label>
+            <input type="text" class="form-control" name="urgency" id="field_urgency"
+                    ng-model="vm.inquiryInfo.urgency"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.notes" for="field_notes">Notes</label>
+            <input type="text" class="form-control" name="notes" id="field_notes"
+                    ng-model="vm.inquiryInfo.notes"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mosaicApp.inquiryInfo.accountNo" for="field_accountNo">Account No</label>
+            <input type="number" class="form-control" name="accountNo" id="field_accountNo"
+                    ng-model="vm.inquiryInfo.accountNo"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

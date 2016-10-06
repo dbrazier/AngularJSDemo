@@ -1,0 +1,60 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "caseId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "gfcId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "inquiryTypeId",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "caseOwner",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "lastInteraction",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "sla",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "caseStartDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "urgency",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "notes",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160805144805",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceClass",
+  "entityTableName": "inquiry_info"
+}

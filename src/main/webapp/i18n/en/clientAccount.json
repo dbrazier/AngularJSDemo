@@ -1,0 +1,30 @@
+{
+    "mosaicApp": {
+        "clientAccount" : {
+            "home": {
+                "title": "Client Accounts",
+                "createLabel": "Create a new Client Account",
+                "createOrEditLabel": "Create or edit a Client Account",
+                "search": "Search for Client Account"
+            },
+            "created": "A new Client Account is created with identifier {{ param }}",
+            "updated": "A Client Account is updated with identifier {{ param }}",
+            "deleted": "A Client Account is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Client Account {{ id }}?"
+            },
+            "detail": {
+                "title": "Client Account"
+            },
+            "accountNo": "Account No",
+            "gfcId": "Gfc Id",
+            "branch": "Branch",
+            "accountName": "Account Name",
+            "currency": "Currency",
+            "balance": "Balance",
+            "restriction": "Restriction",
+            "status": "Status",
+            "iban": "IBAN"
+        }
+    }
+}

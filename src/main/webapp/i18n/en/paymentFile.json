@@ -1,0 +1,33 @@
+{
+    "mosaicApp": {
+        "paymentFile" : {
+            "home": {
+                "title": "Payment Files",
+                "createLabel": "Create a new Payment File",
+                "createOrEditLabel": "Create or edit a Payment File",
+                "search": "Search for Payment File"
+            },
+            "created": "A new Payment File is created with identifier {{ param }}",
+            "updated": "A Payment File is updated with identifier {{ param }}",
+            "deleted": "A Payment File is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Payment File {{ id }}?"
+            },
+            "detail": {
+                "title": "Payment File"
+            },
+            "gfcId": "Gfc Id",
+            "fileId": "File Id",
+            "profileId": "Profile Id",
+            "fileName": "File Name",
+            "fileStart": "File Start",
+            "gksEnd": "Gks End",
+            "lastStep": "Last Step",
+            "noTxns": "No Txns",
+            "failedTxns": "Failed Txns",
+            "fileStatus": "File Status",
+            "fileProfile": "File Profile",
+            "sourceSystem": "Source System"
+        }
+    }
+}

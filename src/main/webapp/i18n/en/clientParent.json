@@ -1,0 +1,24 @@
+{
+    "mosaicApp": {
+        "clientParent" : {
+            "home": {
+                "title": "Client Parents",
+                "createLabel": "Create a new Client Parent",
+                "createOrEditLabel": "Create or edit a Client Parent",
+                "search": "Search for Client Parent"
+            },
+            "created": "A new Client Parent is created with identifier {{ param }}",
+            "updated": "A Client Parent is updated with identifier {{ param }}",
+            "deleted": "A Client Parent is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Client Parent {{ id }}?"
+            },
+            "detail": {
+                "title": "Client Parent"
+            },
+            "gfpId": "Gfp Id",
+            "gfpName": "Gfp Name",
+            "gfcId": "Gfc Id"
+        }
+    }
+}

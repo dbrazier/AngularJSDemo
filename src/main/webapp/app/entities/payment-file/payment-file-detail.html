@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span translate="mosaicApp.paymentFile.detail.title">Payment File</span></h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mosaicApp.paymentFile.gfcId">Gfc Id</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.gfcId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.fileId">File Id</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.fileId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.profileId">Profile Id</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.profileId}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.fileName">File Name</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.fileName}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.fileStart">File Start</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.fileStart | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.gksEnd">Gks End</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.gksEnd}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.lastStep">Last Step</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.lastStep}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.noTxns">No Txns</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.noTxns}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.failedTxns">Failed Txns</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.failedTxns}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.fileStatus">File Status</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.fileStatus}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.fileProfile">File Profile</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.fileProfile}}</span>
+        </dd>
+        <dt><span translate="mosaicApp.paymentFile.sourceSystem">Source System</span></dt>
+        <dd>
+            <span>{{vm.paymentFile.sourceSystem}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <!--<button type="button" ui-sref="payment-file-detail.edit({id:vm.paymentFile.id})" class="btn btn-primary">-->
+        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+        <!--<span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>-->
+    <!--</button>-->
+</div>

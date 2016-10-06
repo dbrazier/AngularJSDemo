@@ -1,0 +1,4 @@
+gfc_id;file_id;profile_id;file_name;file_start;gks_end;last_step;no_txns;failed_txns;file_status;file_profile;source_system
+1;92308825;1;DD8638_OUT_131987_88898765.dat;null;;BssDirectBSI;100;2;Failed;;
+1;92310411;1;FG1132_OUT_131987_76541287.dat;null;;BssFT001;445;1;Failed;;
+1;92400066;1;HY6421_OUT_131987_65231765.dat;null;;BACS101;10000;12;Failed;;

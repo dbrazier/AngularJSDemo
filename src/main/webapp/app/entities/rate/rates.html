@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="mosaicApp.rate.home.title">Rates</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="rate.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="mosaicApp.rate.home.createLabel">
+                        Create new Rate
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mosaicApp.rate.accountNo">Account No</span></th>
+                    <th><span translate="mosaicApp.rate.rateDate">Rate Date</span></th>
+                    <th><span translate="mosaicApp.rate.dbIr">Db Ir</span></th>
+                    <th><span translate="mosaicApp.rate.dbAmount">Db Amount</span></th>
+                    <th><span translate="mosaicApp.rate.crIr">Cr Ir</span></th>
+                    <th><span translate="mosaicApp.rate.crAmount">Cr Amount</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rate in vm.rates track by rate.id">
+                    <td><a ui-sref="rate-detail({id:rate.id})">{{rate.id}}</a></td>
+                    <td>{{rate.accountNo}}</td>
+                    <td>{{rate.rateDate | date:'medium'}}</td>
+                    <td>{{rate.dbIr}}</td>
+                    <td>{{rate.dbAmount}}</td>
+                    <td>{{rate.crIr}}</td>
+                    <td>{{rate.crAmount}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="rate-detail({id:rate.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rate.edit({id:rate.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="rate.delete({id:rate.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
