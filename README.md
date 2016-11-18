@@ -2,7 +2,7 @@
 
 A demo application to show a single shared view of clients data from multiple sources to enable quicker time to resolution for frontline staff.
 
-This application is built using a Java stack on the server side with Spring Boot and a front-end using AngularJS and Bootstrap.  
+This application is built using a Java stack on the server side with Spring Boot and a front-end using AngularJS 1 and Bootstrap.  
 
 This application uses a combination of data from an Oracle XE database and mocked data in H2 tables.
 
